@@ -13,7 +13,7 @@ const Home = () => {
       <Hero></Hero>
 
       <h1 className="text-3xl font-bold">Select Quiz Subject</h1>
-      <div className="grid grid-cols-4 w-4/5 mx-auto gap-3">
+      <div className="md:grid md:grid-cols-4 w-4/5 mx-auto gap-3">
         {data.map((subject) => (
           <Subject key={subject.id} subject={subject}></Subject>
         ))}

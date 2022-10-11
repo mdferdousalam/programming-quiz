@@ -1,22 +1,41 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import * as React from "react";
 
 const Header = () => {
+  let activeStyle = {
+    textDecoration: "underline",
+  };
+
   return (
     <div className="flex justify-between">
-      <Link to="/" className="text-3xl font-bold p-10">
+      <NavLink
+        to="/"
+        className="md:text-3xl md:font-bold ml-5 mx-auto p-5 md:p-10"
+      >
         Programming Interwiew
-      </Link>
-      <div className="text-3xl font-medium p-10">
-        <Link className="p-10 hover:text-orange-400" to="/home">
+      </NavLink>
+      <div className="md:text-3xl  md:font-medium p-5 md:p-10">
+        <NavLink
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          className="md:p-10 pr-2 hover:text-orange-400"
+          to="/home"
+        >
           Home
-        </Link>
-        <Link className="p-10  hover:text-orange-400" to="/statistics">
+        </NavLink>
+        <NavLink
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          className="md:p-10 pr-2 hover:text-orange-400"
+          to="/statistics"
+        >
           Statistics
-        </Link>
-        <Link className="p-10  hover:text-orange-400  " to="/blog">
+        </NavLink>
+        <NavLink
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          className="md:p-10 pr-2 hover:text-orange-400  "
+          to="/blog"
+        >
           Blog
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
