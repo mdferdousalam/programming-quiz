@@ -1,6 +1,6 @@
 # Elements of Programming Interviews.
 
-# Live link: https://lovely-beijinho-8416a1.netlify.app/blog
+# Live link: https://lovely-beijinho-8416a1.netlify.app/home
 
 ## Features
 
