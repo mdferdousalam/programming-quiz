@@ -3,7 +3,7 @@ import React from "react";
 const Statistics = () => {
   return (
     <div>
-      <h1>Stastistics rechart use korte hobe</h1>
+      <h1>Hello statistics</h1>
     </div>
   );
 };
