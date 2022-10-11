@@ -1,17 +1,19 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Header from "./components/Header";
-import Blog from "./components/Blogs";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Statistics from "./components/Statistics";
-import Home from "./components/Home";
 import Layout from "./Layout";
+import Home from "./components/Home";
+import Statistics from "./components/Statistics";
+import Blog from "./components/Blogs";
+import Error from "./components/Error";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Layout></Layout>,
+      errorElement: <Error></Error>,
+      loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
       children: [
         {
           path: "/home",
