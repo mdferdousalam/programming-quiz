@@ -8,7 +8,7 @@ const Quiz = () => {
 
   return (
     <div>
-      <h1 className="text-5xl font-medium mb-5">
+      <h1 className="md:text-5xl md:font-medium md:mb-5">
         Quiz For: {quizes.data.name}
       </h1>
       <hr />

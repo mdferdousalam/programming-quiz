@@ -9,12 +9,12 @@ const Quizzing = ({ quizzing, index }) => {
   const handleEyeButton = () => toast(correctAnswer);
 
   return (
-    <div className="bg-slate-300 border rounded-3xl py-7 my-2">
-      <h1 className="text-xl font-medium py-4">
+    <div className="bg-slate-300 border rounded-3xl md:py-7 my-2">
+      <h1 className="md:text-xl md:font-medium md:py-4">
         Quiz:{index + 1}
         <span> {question.slice(3, -4)}</span>
       </h1>
-      <div className=" grid grid-cols-4">
+      <div className=" md:grid md:grid-cols-4">
         {options.map((option, index) => (
           <Option
             key={index}
@@ -22,7 +22,7 @@ const Quizzing = ({ quizzing, index }) => {
             option={option}
           ></Option>
         ))}
-        <div className="grid grid-cols-1 mx-auto justify-center text-center items-center align-middle">
+        <div className="mg:grid md:grid-cols-1 md:mx-auto justify-center text-center items-center align-middle">
           <p onClick={handleEyeButton}>
             <ToastContainer
               position="top-center"
