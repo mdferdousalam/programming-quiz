@@ -15,8 +15,13 @@ const Statistics = () => {
 
   return (
     <div className="">
-      <h1>Quiz statistics</h1>
-      <LineChart width={1000} height={700} data={quizes.data}>
+      <h1 className="text-xl font-medium my-7">Quiz statistics</h1>
+      <LineChart
+        className="bg-slate-200 mx-auto"
+        width={1000}
+        height={700}
+        data={quizes.data}
+      >
         <Line type="monotype" dataKey="total" stroke="#82ca9d"></Line>
         <XAxis dataKey="name" />
         <YAxis />
